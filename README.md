@@ -117,25 +117,9 @@ As you have uploaded the dataset, you can now find it under Datasets. Drag it on
 
 #### Understanding the data
 
-You have various options to inspect the data. First, you could use the “visualize” option to get a generic idea of the data. In the preparation of the dataset, some data visualizations are included, as you are very flexible to program your own graphs. But you have also the option to inspect the data you have dragged on the canvas. Currently, you have to select all the columns of your dataset and use the “Visualize” option by right-clicking on the output port.
+You have various options to inspect the data. First, you could use the “visualize” option to get a generic idea of the data. In the preparation of the dataset, some data visualizations are included, as you are very flexible to program your own graphs. But you have also the option to inspect the data you have dragged on the canvas. 
 
-* Drag the Select Columns in Dataset on the canvas
-* Connect it to the dataset module by selecting the output port of the dataset module and dragging an arrow to the input of the Select Columns module
-* Select the With Rules option
-* Begin with All Columns to obtain all the columns from the dataset
-
-In order to see the results, you first have to run the experiment.
-
-* Click on Run at the bottom of the window
-* Select of create the compute target
-* Click on run
-
-This might take a while, especially when you have created a new compute target. To run this, you would need to create a compute of the type “Machine Learning Compute”.
-
-After running the experiment, you are ready to inspect the data.
-
-* Right-click on the output port of the Select Columns Dataset
-* Select the Visualize option
+To visualize the data select the module, on the right window select 'Outputs and then the graph visual to view your dataset
 
 ![Visualizing the dataset](docsimages/visualizeData.png)
 
@@ -165,9 +149,15 @@ During the data preparation, we already created the variable “color” as we a
 
 *Note: this is just to show you the possibilities of the visual interface, as the variable “qual_bool” already exists in the dataset.*
 
-* Drag the Execute R Script on the canvas and connect it to the Select Columns in Dataset module
+* Drag the Execute R Script on the canvas and connect it to the dataset module
 * Substitute the preformatted code with the code below
-* Run the experiment
+* Now we will run the experiment to execute the code and review the output
+  * In the top right select the 'Run' button
+  * Under 'Experiment' select the drop down and '+ New experiment'
+  * Enter an experiment name, example: GAIbootcamp
+  * enter a description if you wish for the run
+  * Acknowledge your compute target selected
+  * Click 'Run'
 
 ```r
 
@@ -187,11 +177,12 @@ Now you have a Boolean that contains a 1 when the original quality of the wine w
 
 In the next step you have to remove the original quality variable. Therefore, use the Select Columns module, and exclude the quality variable.
 
-* Drag the Select Columns from Dataset on the canvas and connect it to the Execute R Script module
-* Select the With Rules options
-* Begin with All Columns
-* Exclude by using column names and select the variable “quality” and “qual_bool”.
-* Run the experiment
+* Drag the 'Select Columns in Dataset' on to the canvas and connect it to the Execute R Script module
+* On the right panel select 'Edit column'
+* Select the 'By name' and under available columns select Add all
+* Then choose the minus (-) button for “quality” and “qual_bool”
+* Click 'Save'
+* Run experiment
   
 ![Selecting columns from the dataset](docsimages/selectColumns.png)
 
