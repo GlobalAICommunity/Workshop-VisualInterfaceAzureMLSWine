@@ -1,70 +1,71 @@
-# Workshop: How to Build a Machine Learning Model with the Visual Interface for Azure Machine Learning Service - Predict Wine Quality
+# Workshop: How to Build a Machine Learning Model with the Azure Machine Learning designer - Predict Wine Quality
 
-In this workshop, you will learn how to build a machine learning model to predict the quality of wine with the visual interface for [Azure Machine Learning Service](https://studio.azureml.com/). We will use an example case study, with the Data Science Lifecycle as guideline. You will first look at the Business Understanding, proceed with the Data Acquisition and Understanding. Then you will start the Modeling part, the Deployment, and finally the Customer Acceptance part. We will first introduce every step, and then elaborate on the corresponding visual interface components to fulfil the step.
+In this workshop, you will learn how to build a machine learning model to predict the quality of wine with the [Azure Machine Learning designer](https://docs.microsoft.com/en-us/azure/machine-learning/service/concept-designer). We will use an example case study, with the **Data Science Life-cycle** as guideline. You will first look at the **Business Understanding**, proceed with the **Data Acquisition and Understanding**. Then you will start the **Modeling** part, the **Deployment**, and finally the **Customer Acceptance** part. We will first introduce every step, and then elaborate on the corresponding Azure Machine Learning designer components to fulfil the steps.
 
-*Note: we assume you have basic machine learning knowledge, as this workshop only looks at the tooling and not on the underlying techniques.*
+*Note: we assume you have basic machine learning knowledge, as this workshop only looks at the tooling and not the underlying techniques.*
 
-## Prerequisites
+## Pre-requisites
 
-* Azure Pass or subscription
-* Machine Learning Workspace. You can create such workspace by going to the [Azure Portal](https://portal.azure.com) and click on Create new resource, and search for Machine Learning:
+* Azure Pass or subscription - [Try it for Free](https://azure.microsoft.com/en-gb/)
+* Azure Machine Learning instance. You can create this by going to the [Azure Portal](https://portal.azure.com) and click on Create new resource, and search for Machine Learning:
 
 ![Create Machine Learning Workspace](docsimages/createMachineLearningWorkspace.png)
 
-From your Machine Learning Workspace, you can launch the visual interface:
+Once you have created an instance of Azure Machine Learning, select 'Launch Azure Machine Learning studio':
 
-![Launch Visual Interface](docsimages/launchVisualInterface.png)
+![Launch Visual Interface](docsimages/launchAMLstudio.PNG)
 
-## Visual Interface for Azure Machine Learning Service
+## Azure Machine Learning designer
 
 ### Case description: Cheers
 
 In this case, you want to predict the quality of wine. We used a dataset from UCI Machine Learning repository that contained 6497 observations with physicochemical properties of red and white Portuguese wine and their quality (Cortez).
 
-### Azure Machine Learning Service - The Visual Interface
+### Azure Machine Learning designer
 
-With the visual interface for Azure Machine Learning Service, developers and data scientists van quickly build, test, develop, deploy, and consume predictive models using state-of the art machine learning algorithms in an interactive visual workspace.
+With the Azure Machine Learning designer, developers and data scientists can quickly build, test, develop, deploy, and consume predictive models using state-of the art machine learning algorithms in an interactive visual workspace.
 
-![Visual Interface for Azure Machine Learning Service](docsimages/visualInterface.png)
+![Azure Machine Learning designer](docsimages/update.png)
 
 It is organized as follows:
 
 * Experiments: a list of experiments that you have created.
-* Web Services: a list of experiments that you have published as a webservice.
+* Web Services: a list of experiments that you have published as a web service.
 * Datasets: the datasets that you have uploaded and a list of sample datasets.
 
 In order to develop a predictive model, you will need the data. This can come from various sources. Furthermore, you probably want to transform and analyse the data before you can use it to train the model. Therefore, this visual interface contains several components: the modules. In this case study, you will use several of these components.
 
 ### Components of an Experiment
 
-* Saved Datasets: contains your uploaded datasets, as well as the provided samples
-* Data Format Conversions: contains the module to convert your output to CSV
-* Data Input and Output: contains the modules to enter the data manually, export the data, or import the data
-* Data Transformation: contains the modules to manipulate, sample and split, and scale and reduce the data
-* Machine Learning: contains the modules to initialize the model, train the model, score, and evaluate the model
-* Python Language Modules: contains the modules to create a Python model, and the execute Python script
-* R Language Modules: contains the module to execute R script
-* Text Analytics: contains the modules to extract n-gram features, feature hashing, and to preprocess text.
-* Web Services: contains the modules to define the input and output ports of you model.
+* **Datasets:** contains your uploaded datasets, as well as the provided samples
+* **Data Input and Output:** contains the modules to enter the data manually, export the data, or import the data
+* **Data Transformation:** contains the modules to manipulate, sample and split, and scale and reduce the data
+* **Machine Learning Algorithms:** contains the modules relating to regression, classification and clustering algorithms you can use
+* **Model Training:** contains modules to train your algorithm
+* **Model Scoring & Evaluation:** Ability to score and evaluate your model performance
+* **Python Language Modules:** contains the modules to create a Python model, and the execute Python script
+* **R Language Modules:** contains the module to execute R script
+* **Text Analytics:** contains the modules to extract n-gram features, feature hashing, and to preprocess text.
+* **Web Services:** contains the modules to define the input and output ports of you model.
 
 ## Data Science Lifecycle
 
 ### Business Understanding
 
-In this part of the lifecycle, there are two main goals. First, you have to define the objectives, and second, you have to identity data sources.
+In this part of the lifecycle, there are two main goals. First, you have to define the objectives, and second you have to identity data sources.
 
 To define the objectives, you have to identify the business problem first. An important part of defining the objective, is defining the target variable, or dependent variable, and identifying key variables. To find key variables, we highly recommend you to look at the existing body of knowledge regarding your objective. You are probably not the first person that has this problem. Based on that, you can formulate business goals by defining "sharp" questions that are relevant, specific, and unambiguous, which you can answer with the key variables that you identified.
 
 Then you are ready to identify our data sources, containing the prior defined target and key variables.
 Although in this case you work with a sample dataset, it is always a nice exercise to elaborate these steps for yourself, although in real life you would work with your customer and other stakeholders.
 
-Case: Regarding the wine quality, you would like to understand whether you could predict the quality of the wine, or if the wine is good or bad. For now, you only want to know whether a wine is good or not. And by good we mean a quality score of 6 or higher. By creating such a model, you could predict the quality based on the physicochemical properties by taking a sample, and hence adapt i.e. the price.
+**Case:** Regarding the wine quality, you would like to understand whether you could predict the quality of the wine, or if the wine is good or bad. For now, you only want to know whether a wine is good or not. And by good we mean a quality score of 6 or higher. By creating such a model, you could predict the quality based on the physicochemical properties by taking a sample, and hence adapt i.e. the price.
 
 ### Data Acquisition and Understanding
 
 In this part of the lifecycle, there are two main goals. First, you want to produce a clean, high-quality data set with the key variables and the target variables. Make sure that the location of the data set is in such way, that you are ready to access it.
 
-Secondly, it’s time to start thinking about a solution architecture of the data pipeline. Because in order to obtain such clean, high-quality data set, you will have to ingest and clean the data programmatically to make it repeatable. And for future steps, you also want to make sure that new data is processed the same way, maybe engineer features, and score your data set by your -yet to be developed- models. Finally, you want to story your results and share them with your customer.
+Secondly, it’s time to start thinking about a solution architecture of the data pipeline. Because in order to obtain such clean, high-quality data set, you will have to ingest and clean the data programmatically to make it repeatable. And for future steps, you also want to make sure that new data is processed the same way, maybe engineer features, and score your data set by your -yet to be developed- models. Finally, you want to store your results and share them with your customer.
 
 #### Data Acquisition
 
@@ -76,27 +77,43 @@ You start with ingesting the data, for which you have three options:
 
 Once you have the data, you can start inspecting it, and start the pre-processing part to obtain a clean, high-quality data set.
 
-We obtained the data from the UCI Machine Learning repository website and combined the red and white datasets. This file 'winedata.csv' can be found in the GitHub repo [Wine Quality: Data ingest and exploratory data analysis](https://github.com/mdragt/WineQuality) that can be used for this workshop. The dataset will be prepared so you can upload it to the Visual interface (preview) for Azure Machine Learning Service.
+We obtained the data from the UCI Machine Learning repository website and combined the red and white datasets. This file 'winedata.csv' can be found in the GitHub repo [Wine Quality: Data ingest and exploratory data analysis](https://github.com/mdragt/WineQuality) that can be used for this workshop. The dataset will be prepared so you can upload it to the Azure Machine Learning designer.
 
 *Note: this dataset is from a GitHub repo, meaning that it might be updated every now and then.*
 
 To upload the dataset:
 
-* Click on + New at the left bottom of the page.
-* Select Datasets
-* Select Upload from Local File and select the local datafile 'winedata.csv' from the GitHub repository.
+* You will be in the [Azure Machine Learning studio](http://ml.azure.com)
+* Click on 'Datasets'
+* 'Create dataset' and then 'from local files'
+* Browse and select the downloaded Wine Quality dataset from above and choose Next
+* Keep all the settings as default and choose Next
+* Next again
+* Then finally click Create
 
 ![Upload the dataset](docsimages/uploadData.png)
 
-Now you are going to create e new experiment.
+Now you are going to create a new experiment.
 
-* To start a new experiment, click + New left at the bottom of the window.
-* Select the option to create a Blank Experiment. This will create a new experiment and will show you the canvas where you can drag your modules on.
-* Rename the experiment.
+* To start a new experiment, click 'Designer' on the left navigation
+* Select the plus icon (+) with 'Easy-to-use prebuilt modules' text
+* Once the designer is open to your workspace - rename the experiment in the Settings pane
 
 ![Create a new experiment](docsimages/createExperiment.png)
 
-As you have uploaded the dataset, you can now find it under My Datasets. Drag it on the canvas.
+Finally we need to create/assign some compute for the experiment to run on.
+
+* In the Settings pane, select 'Select compute target'
+* Choose 'Create new'
+* Use the predefined recommended compute and provide a compute name, for example 'trainingcompute'
+* Choose 'Save'
+* Close the Setting pane
+
+![Create Compute Target](docsimages/createCompute.PNG)
+
+As you have uploaded the dataset, you can now find it under Datasets. Drag it on the canvas.
+
+![Dataset onto Canvas](docsimages/datasetdrag.PNG)
 
 #### Understanding the data
 
