@@ -245,13 +245,13 @@ Be critical here: it might be nice to see that you have reached 77% of accuracy 
 
 ### Deployment
 
-In this part of the lifecycle, there is one main goal. You want to deploy our prior develop model, with a data pipeline to a production or production-like environment for final user acceptance.
+In this part of the lifecycle, there is one main goal. You want to deploy our prior developed model, with a data pipeline to a production or production-like environment for final user acceptance.
 
 #### Create a Predictive Experiment
 
-When you are satisfied with your model quality, you have to option to create a predictive experiment.
+When you are satisfied with your model quality, you have to option to create an inference pipeline
 
-* Click on Create Predictive Experiment. You will be only allowed to click on this button if you have successfully run the experiment.
+* Click on 'Create inference pipeline' and choose 'Real-time inference pipeline'. You will be only allowed to click on this button if you have successfully run the experiment.
 
 This will create a new experiment that is linked to your training experiment.
 
@@ -259,7 +259,7 @@ This will create a new experiment that is linked to your training experiment.
 
 One important step to conduct before you can deploy this model, is eliminating the dependent variable from your model. When you want to make predictions based on new data, this is exactly the variable you don’t have!
 
-* Select the second Select Columns from Dataset module
+* Select the Select Columns from Dataset module
 * Enhance the rule, indicating that you also want to exclude the variable qualityBool
 
 ![Exclude dependent variable from selection](docsimages/excludeDependent.png)
@@ -271,7 +271,7 @@ One important step to conduct before you can deploy this model, is eliminating t
 
 #### Deploy the Web Service
 
-The final step would be de deployment of the model. Just click on the Deploy Web Service at the bottom of the window, and you are done! Well, almost. For the deployment, you need to create a compute with the type “Kubernetes Service”.
+The final step would be the deployment of the model. Just click on the Deploy Web Service at the bottom of the window, and you are done! Well, almost. For the deployment, you need to create a compute with the type “Kubernetes Service”.
 
 ![Testing the web service](docsimages/testingWebservice.png)
 
@@ -289,13 +289,13 @@ Finally, you have to think about our customers. In most cases, you cannot just s
 
 ## Summary
 
-In this workshop you learned how to build a classification model with the new visual interface for Azure Machine Learning Service.
+In this workshop you learned how to build a classification model with the Azure Machine Learning designer.
 
 ## Source
 
 ### Environment
 
-* [Visual Interface for Azure Machine Learning](<"https://studio.azureml.com">)
+* [Azure Machine Learning designer](http://ml.azure.com/)
 * [Azure platform](<"https://portal.azure.com">)
 
 ### Raw data and additional information
