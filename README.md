@@ -25,7 +25,7 @@ In this case, you want to predict the quality of wine. We used a dataset from UC
 
 With the Azure Machine Learning designer, developers and data scientists can quickly build, test, develop, deploy, and consume predictive models using state-of the art machine learning algorithms in an interactive visual workspace.
 
-![Azure Machine Learning designer](docsimages/update.png)
+![Azure Machine Learning designer](docsimages/designer.PNG)
 
 It is organized as follows:
 
@@ -265,17 +265,14 @@ One important step to conduct before you can deploy this model, is eliminating t
 ![Exclude dependent variable from selection](docsimages/excludeDependent.png)
 
 * Connect the Web service input directly to the Score Model module
+* Remove the evaluate module
 * Run the model
 
 ![Set the correct Web service input](docsimages/setWebServiceInput.png)
 
 #### Deploy the Web Service
 
-The final step would be the deployment of the model. Just click on the Deploy Web Service at the bottom of the window, and you are done! Well, almost. For the deployment, you need to create a compute with the type “Kubernetes Service”.
-
-![Testing the web service](docsimages/testingWebservice.png)
-
-Under Web Services, you can now find the deployed model, and you can test it. Here you can also find general information about the deployment, information about how to consume your model, including code samples, and documentation about the API.
+The final step would be the deployment of the model. Just click on the Deploy in the top right, and you are done! Well, almost. For the deployment, you need to create some extra Azure Kubernetes Service (AKS) compute. To find out more on deployment check out the tutorial here: [Tutorial: Deploy a machine learning model with the designer (preview)](https://docs.microsoft.com/en-us/azure/machine-learning/service/tutorial-designer-automobile-price-deploy)
 
 ### Customer Acceptance
 
