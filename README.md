@@ -7,7 +7,7 @@ In this workshop, you will learn how to build a machine learning model to predic
 ## Pre-requisites
 
 * Azure Pass or subscription - [Try it for Free](https://azure.microsoft.com/en-gb/)
-* Azure Machine Learning instance. You can create this by going to the [Azure Portal](https://portal.azure.com) and click on Create new resource, and search for Machine Learning:
+* Azure Machine Learning instance. You can create this by going to the [Azure Portal](https://portal.azure.com) and click on Create new resource, and search for Machine Learning. Make sure you create an Enterprise Edition Workspace.
 
 ![Create Machine Learning Workspace](docsimages/createMachineLearningWorkspace.png)
 
