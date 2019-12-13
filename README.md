@@ -265,7 +265,7 @@ One important step to conduct before you can deploy this model, is eliminating t
 ![Exclude dependent variable from selection](docsimages/excludeDependent.png)
 
 * Connect the Web service input directly to the Score Model module
-* Remove the evaluate module
+* If you want, you could also remove the evaluate module, but this is not required
 * Run the model
 
 ![Set the correct Web service input](docsimages/setWebServiceInput.png)
