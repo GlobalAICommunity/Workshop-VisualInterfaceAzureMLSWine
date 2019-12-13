@@ -1,13 +1,13 @@
 # Workshop: How to Build a Machine Learning Model with the Azure Machine Learning designer - Predict Wine Quality
 
-In this workshop, you will learn how to build a machine learning model to predict the quality of wine with the [Azure Machine Learning designer](https://docs.microsoft.com/en-us/azure/machine-learning/service/concept-designer). We will use an example case study, with the **Data Science Life-cycle** as guideline. You will first look at the **Business Understanding**, proceed with the **Data Acquisition and Understanding**. Then you will start the **Modeling** part, the **Deployment**, and finally the **Customer Acceptance** part. We will first introduce every step, and then elaborate on the corresponding Azure Machine Learning designer components to fulfil the steps.
+In this workshop, you will learn how to build a machine learning model to predict the quality of wine with the [Azure Machine Learning designer](https://docs.microsoft.com/en-us/azure/machine-learning/service/concept-designer/?WT.mc_id=gaic-github-cxa). We will use an example case study, with the **Data Science Life-cycle** as guideline. You will first look at the **Business Understanding**, proceed with the **Data Acquisition and Understanding**. Then you will start the **Modeling** part, the **Deployment**, and finally the **Customer Acceptance** part. We will first introduce every step, and then elaborate on the corresponding Azure Machine Learning designer components to fulfil the steps.
 
 *Note: we assume you have basic machine learning knowledge, as this workshop only looks at the tooling and not the underlying techniques.*
 
 ## Pre-requisites
 
-* Azure Pass or subscription - [Try it for Free](https://azure.microsoft.com/en-gb/)
-* Azure Machine Learning instance. You can create this by going to the [Azure Portal](https://portal.azure.com) and click on Create new resource, and search for Machine Learning. Make sure you create an Enterprise Edition Workspace.
+* Azure Pass or subscription - [Try it for Free](https://azure.microsoft.com/?WT.mc_id=gaic-github-cxa)
+* Azure Machine Learning instance. You can create this by going to the [Azure Portal](https://portal.azure.com/?WT.mc_id=gaic-github-cxa) and click on Create new resource, and search for Machine Learning. Make sure you create an Enterprise Edition Workspace.
 
 ![Create Machine Learning Workspace](docsimages/createMachineLearningWorkspace.png)
 
@@ -23,7 +23,7 @@ In this case, you want to predict the quality of wine. We used a dataset from UC
 
 ### Azure Machine Learning designer
 
-With the Azure Machine Learning designer, developers and data scientists can quickly build, test, develop, deploy, and consume predictive models using state-of the art machine learning algorithms in an interactive visual workspace.
+With the [Azure Machine Learning designer](https://docs.microsoft.com/en-us/azure/machine-learning/service/concept-designer/?WT.mc_id=gaic-github-cxa), developers and data scientists can quickly build, test, develop, deploy, and consume predictive models using state-of the art machine learning algorithms in an interactive visual workspace.
 
 ![Azure Machine Learning designer](docsimages/designer.PNG)
 
@@ -47,6 +47,8 @@ In order to develop a predictive model, you will need the data. This can come fr
 * **R Language Modules:** contains the module to execute R script
 * **Text Analytics:** contains the modules to extract n-gram features, feature hashing, and to preprocess text.
 * **Web Services:** contains the modules to define the input and output ports of you model.
+
+[See all modules available in the documentation](https://docs.microsoft.com/en-us/azure/machine-learning/algorithm-module-reference/module-reference/?WT.mc_id=gaic-github-cxa)
 
 ## Data Science Lifecycle
 
@@ -83,7 +85,7 @@ We obtained the data from the UCI Machine Learning repository website and combin
 
 To upload the dataset:
 
-* You will be in the [Azure Machine Learning studio](http://ml.azure.com)
+* You will be in the [Azure Machine Learning studio](http://ml.azure.com/?WT.mc_id=gaic-github-cxa)
 * Click on 'Datasets'
 * 'Create dataset' and then 'from local files'
 * Browse and select the downloaded Wine Quality dataset from above and choose Next
@@ -213,6 +215,8 @@ With the training data, you will now train the model. You have to choose an algo
 * Leave the standard hyperparameters as they are, but set a seed to make it reproducible
 * Run the experiment
 
+Learn more about choosing algorithms using the [Azure Machine Learning Designer Algorithm Cheat Sheet](https://docs.microsoft.com/en-us/azure/machine-learning/algorithm-cheat-sheet/?WT.mc_id=gaic-github-cxa)
+
 ![Training the model](docsimages/trainModel.png)
 
 #### Score the test data
@@ -272,7 +276,7 @@ One important step to conduct before you can deploy this model, is eliminating t
 
 #### Deploy the Web Service
 
-The final step would be the deployment of the model. Just click on the Deploy in the top right, and you are done! Well, almost. For the deployment, you need to create some extra Azure Kubernetes Service (AKS) compute. To find out more on deployment check out the tutorial here: [Tutorial: Deploy a machine learning model with the designer (preview)](https://docs.microsoft.com/en-us/azure/machine-learning/service/tutorial-designer-automobile-price-deploy)
+The final step would be the deployment of the model. Just click on the Deploy in the top right, and you are done! Well, almost. For the deployment, you need to create some extra Azure Kubernetes Service (AKS) compute. To find out more on deployment check out the tutorial here: [Tutorial: Deploy a machine learning model with the designer (preview)](https://docs.microsoft.com/en-us/azure/machine-learning/service/tutorial-designer-automobile-price-deploy/?WT.mc_id=gaic-github-cxa)
 
 ### Customer Acceptance
 
@@ -295,8 +299,8 @@ Finally, If you don't expect to need these resources in the future and want to s
 
 ### Environment
 
-* [Azure Machine Learning designer](http://ml.azure.com/)
-* [Azure platform](<"https://portal.azure.com">)
+* [Azure Machine Learning designer](http://ml.azure.com/?WT.mc_id=gaic-github-cxa)
+* [Azure platform](https://portal.azure.com/?WT.mc_id=gaic-github-cxa)
 
 ### Raw data and additional information
 
