@@ -288,6 +288,9 @@ Finally, you have to think about our customers. In most cases, you cannot just s
 
 In this workshop you learned how to build a classification model with the Azure Machine Learning designer.
 
+## Clean up resources
+Finally, If you don't expect to need these resources in the future and want to save cost, you can delete them by deleting the resource group you created. To do so go to the Azure Portal, select 'Resource Groups' and select the resource group for this workshop, select Delete, then confirm the name of the resource group to delete.
+
 ## Source
 
 ### Environment
